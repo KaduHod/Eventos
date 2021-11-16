@@ -1,0 +1,20 @@
+header{
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+.row{
+    margin: 0;
+}
+.container-fluid{
+    padding:0;
+}
+.btn-primary{
+    background-color: #f2a340;
+    border: 2px solid #c28008;
+}
+.btn-primary:hover{
+    background-color: #ee8f1c;
+    border: 2px solid #c28008;
+    
+}
