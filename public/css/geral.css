@@ -12,6 +12,19 @@ body{
 #main{
     
 }
+.form-group, .botaoCreateEvent{
+    margin-top: 15px;
+}
+
+.msg{
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 10px;
+    text-align: center;
+}
 /*NAV BAR*/
 #navbar {
     justify-content: space-between;
@@ -50,8 +63,49 @@ body{
     width: 50%;
     margin: 0 auto;
 }
+/*Event page*/
+#image-container,
+#info-container{
+    margin-top:20px;
+}
+#image-container img{
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#info-container{
+    font-size: 30px;
+    font-weight: 900;
+}
+#info-container p {
+    margin:0;
+    font-size: 14px;
+    display: flex;
+}
+
+#info-container ion-icon{
+    font-size: 20px;
+    color: #f2a340;
+    margin-right: 10px;
+}
+
+#info-container h3,
+#description-container h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#info-container #event-submit{
+    margin:20px 0;
+}
 
 /*Events list*/
+#items-list {
+    list-style: none;
+    padding-left: 0;
+}
+#items-list li{
+    display: flex;
+}
 #events-container{
     padding: 50px;
 }
@@ -72,10 +126,11 @@ body{
     
 }
 #events-container .card{
-    flex: 1 1 0;
+    flex: 1 1 24%;
     max-width: 25%;
+    
     border-radius: 0px;
-    margin: 5px;
+    margin: .5%;
     border-radius:10px;
 }
 #events-container img{
@@ -95,4 +150,21 @@ body{
     font-size:20px;
     font-weight:bold;
     margin-bottom: 30px;
+}
+.card-participants{
+    font-size: 14px;
+    color: #757575;
+}
+
+/*EVENT CREATE PAGE*/
+#event-create-container{
+    padding: 30px;
+}
+#event-create-container label{
+    font-weight: bold;
+}
+#event-create-container input,
+#event-create-container input select,
+#event-create-container input textarea{
+    font-size: 12px;
 }

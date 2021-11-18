@@ -14,25 +14,22 @@
     <div id='cards-container' class='row'>
         @foreach($events as $event)
             <div class='card col-md-3'>
-                <img src="/img/GymPequeno.jpg" alt="{{$event->tittle}}">
+                <img src="/img/events/{{$event->image}}" alt="{{$event->tittle}}">
                 <div class="card-body">
-                    <p class="card-date">10/09/2021</p>
+                    <p class="card-date">{{date('d/m/y'), strtotime($event->date)}}</p>
                     <h5 class='card-tittle'>{{$event->tittle}}</h5>
                     <p class="card-participants">X participantes</p>
                     <p>{{$event->description}}</p>
-                    <p>{{$event->create_at}}</p>
-                    <p>{{$event->date_create}}</p>
                     <p>{{$event->city}}</p>
-                    @if($event->private)
-                        <strong> Evento privado</strong>
-                    @else
-                        <strong> Evento público</strong>
-                    @endif
-                    <a href="" class='btn btn-primary'>Saber mais</a>
+                    <a href="/events/{{$event->id}}" class='btn btn-primary'>Saber mais</a>
                 </div>
+                
                 
             </div>
         @endforeach
+        @if(count($events)==0)
+        <p>Não á eventos cadastrados até o momento!</p>
+        @endif
     </div>
 </div>
 

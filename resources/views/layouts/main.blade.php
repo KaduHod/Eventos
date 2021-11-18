@@ -25,6 +25,7 @@
     </style>
 </head>
 <body>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <header>
         <nav class="navbar navbar-expand-lg navbar-ligth">
             <div class="collapse navbar-collapse" id="navbar">
@@ -57,13 +58,19 @@
             </div>
         </nav>
     </header>
-    <div id='main'>
-        @yield('content') <!-- conteudo renderizado da view -->
-    </div>
-    
-    <!--<footer>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                @if(session('msg'))
+                    <p class="msg">{{session('msg')}}</p>
+                @endif
+                @yield('content') <!-- conteudo renderizado da view -->
+            </div>
+        </div>
+    </main>    
+    <footer>
         <p>Meu Footer</p>
-    </footer>-->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </footer>
+    
 </body>
 </html>

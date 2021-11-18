@@ -1,0 +1,12 @@
+footer{
+    text-align: center;
+    background-color:#353e48 ;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+    width: 100%;
+}
+footer p{
+    margin-bottom: 0;
+}

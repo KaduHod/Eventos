@@ -14,18 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\EventController;
 
-Route::get('/', [EventController::Class, 'index']);
+Route::get('/', [EventController::Class, 'index']);// mostrar inicio do site
 
-Route::get('/events/create', [EventController::Class, 'create']);
+Route::get('/events/create', [EventController::Class, 'create']);// criar registro no DB
 
-Route::get('/Contato', function () {
-    return view('contato');
-});
-Route::get('/Produtos', function () {
-    $busca = request('search');
-    return view('produtos', ['busca'=>$busca]);
-});
-Route::get('/Produto/{id?}', function ($id=null) {
-    return view('Produto',['id'=> $id]);
-});
+Route::post('/events', [EventController::class, 'store']);// Salvar dados na DB
+
+Route::get('/events/{id}', [EventController::class, 'show']);// Mostrar dados da DB
+
+
 
